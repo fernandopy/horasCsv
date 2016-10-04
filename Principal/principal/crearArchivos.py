@@ -5,7 +5,6 @@ Created on 04/10/2016
 '''
 from dateutil.parser import parse
 import time
-from datetime import date
 from datetime import datetime
 import pandas as pd
 
@@ -19,7 +18,7 @@ for i in range(0,24):
     arr.append(int(aux))##losvalores enteros se agregan a un arreglo
 
 for i in range(0,len(arr)):#se recorre el arreglo de las horas en formato timestamp para hacer el filtrado de el csv
-    if i == 23:#cuando es la hora 23 se hace el filtrdo apartir del 23 hasta las 00 horas del día siguiente 1449295200100
+    if i == 23:#cuando es la hora 23 se hace el filtrdo apartir del 23 hasta las 00 horas del dÃ­a siguiente 1449295200100
         dat_filter = valores[(valores['pubmillis'] >= arr[i]) & (valores['pubmillis'] < 1449295200100)]
         nombre_arch = "04-12-15_"+str(i)+".csv"
         dat_filter.to_csv(nombre_arch)#"""
